@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width" />
+<link rel="canonical" href="index.html" />
+<meta name="robots" content="index,follow" />
+<title>{% block title %}{% endblock %}</title>
+<meta name="description" content="immortalsunscans" />
+<meta name="keywords" itemprop="keywords" content="immortalsunscans" />
+<meta name="copyright" content="Copyright © 2020 immortalsunscans" />
+<meta name="Author" content="Immortalsunscans" />
+<meta name="twitter:card" content="immortalsunscans" />
+<meta name="twitter:site" content="Immortalsunscans" />
+<meta name="twitter:title" content="Immortalsunscans - Read immortalsunscans Online Free" />
+<meta name="twitter:description" content="immortalsunscans" />
+<meta name="twitter:image" content="../lh3.googleusercontent.com/-iK1y5xV28gs/WCcslYmPKAI/AAAAAAACQGg/o9pv0oioVlY/s0/5826ca23a4ad3.jpg" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="immortalsunscans - Read immortalsunscans Online Free" />
+<meta property="og:url" content="index.html" />
+<meta property="og:image" content="../lh3.googleusercontent.com/-iK1y5xV28gs/WCcslYmPKAI/AAAAAAACQGg/o9pv0oioVlY/s0/5826ca23a4ad3.jpg" />
+<meta property="og:description" content="immortalsunscans" />
+<meta property="og:site_name" content="index.html" />
+
+
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'themes/hm/css/c-style07e8.css' %}" />
+<link rel="stylesheet" href="{% static 'themes/hm/css/owl.theme.css' %}" />
+<link rel="stylesheet" href="{% static 'themes/hm/css/owl.carousel.css' %}" />
+<link rel="stylesheet" href="{% static 'themes/hm/css/tooltip07e8.css' %}" />
+<link rel="stylesheet" href="{% static 'themes/hm/css/c-style-search07e8.css' %}" />
+
+<script type="text/javascript" src="{% static 'themes/hm/js/jquery-1.9.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'themes/hm/js/owl.carousel.js' %}"></script>
+<script type="text/javascript" src="{% static 'themes/hm/js/cookie.js' %}"></script>
+<script type="text/javascript" src="{% static 'themes/hm/js/custom07e8.js' %}"></script>
+<script type="text/javascript" src="{% static 'themes/hm/js/tooltip07e8.js' %}"></script>
+<script type="text/javascript" src="{% static 'themes/hm/js/fsearch07e8.js' %}"></script>
+<link rel="stylesheet" href="{% static 'themes/starrate/css/style.css' %}" />
+<script type="text/javascript" src="{% static 'themes/starrate/js/starwarsjs.js' %}"></script>
+<meta property="fb:app_id" content="1664224760511779" />
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" nonce="0B4zNzVy"></script>
+{% block stylesheet %} {% endblock %}
+</head>
+
+<body>
+<div class="body-site">
+<div class="container container-header">
+<div class="logo"><!-- This is a logo area -->
+<a href="{% url 'index' %}" title="Immortalsunscans Online">
+<img src="{% static 'img/logo2.jpg' %}" alt="Immortalsunscans Online" title="Immortalsunscans Online">
+</a>
+</div>
+<div class="container-header-top" style="background:#2F2724!important;">
+<div class="box-search">
+<form name="frmsearch">
+<input id="search-story" autocomplete="off" placeholder="Search immortalsunscans(everything)" class="search-story">
+<input style="display: none;" />
+</form>
+        <script>
+                $search_address = baseurljs + 'search/story/';
+           </script>
+</div>
+<div class="box-user-options">
+<a rel="nofollow" href="#" class="user-login">Login</a>
+<a rel="nofollow" href="#" class="user-register">Register</a>
+
+</div>
+</div>
+<a class="header-mobile-menu">MENU</a>
+<div class="header-menu" style="background-color:#D37E47!important;">
+<a class="a-h" href="{% url 'index' %}" title="Manga Online">MANGA HOME</a>
+<a class="a-h" href="#" title="LATEST MANGA">LATEST MANGA</a>
+<a class="a-h" href="#" title="HOT MANGA">HOT MANGA</a>
+<a class="a-h" href="#" title="NEWEST MANGA">NEWEST MANGA</a>
+</div>
+</div>
+<div class="container container-silder">
+<h2 class="silder-title" style="background:#2F2724!important;">TOP WEEK</h2>
+<div id="owl-slider" class="owl-carousel" style="color:#1392DE!important;">
+    <!-- Start Slider Items -->
+    {% for p in post %}
+
+    <div class="item">
+    <img class="img-loading" src="{{ p.image.url }}" onerror="javascript:this.src='themes/hm/images/404_not_found.png';" alt="Tales of Demons and Gods" /> <div class="slide-caption"><h3><a rel="nofollow" class="text-nowrap a-h" href="{% url 'details' id=p.id %}" title="Tales of Demons and Gods">{{ p.title }}</a></h3><a rel="nofollow" class="text-nowrap a-h" href="/chapter/{{p.chapter_set.last.id}}" title="immortalsunscans">{{ p.chapter_set.last.name }} </a>
+    </div>
+    </div>
+
+    {% endfor %}
+    <!-- End Slider Items -->
+
+</div>
+</div>
+
+
+    <div class="container container-main"><!-- This is a main content area  -->
+<div class="container-main-left">
+    {% block content %}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            tooltip();
+            $.getJSON('https://immortalsunscans.com/' + 'home_tooltips_json', function(manga) {
+                var id = "";
+                var str_id_isset = ",";
+                $('a.tooltip').hover(function(e) {
+                    if (!$(this).hasClass('hastool')) {
+                        id = $(this).attr('data-tooltip');
+                        $.each(manga, function(key, val) {
+                            if ("sticky_"+val.id == id && str_id_isset.indexOf(","+val.id+",") == -1) {
+                                str_id_isset += val.id + ",";
+                                $tt_no = '';
+                                if(val.nameother.trim() != '')
+                                    $tt_no = '<p><label>Alternative:</label>' + val.nameother + '</p>';
+                                $tt_au = '';
+                                if(val.author.trim() != '')
+                                    $tt_au = '<p><label>Author(s):</label>' + val.author + '</p>';
+                                $tooltip_add = '<div id="'+ id +'" class="atip"> <div id="tooltip"> <h3>' + val.name + '</h3> <div class="tooltip_main"> <div class="tooltip_detail"> <img class="img-loading" src="' + val.image + '" /> <div class="tooltip_detail_left">'+ $tt_no + $tt_au + '<p> <label>Update:</label>' + val.updatetime + '</p> <p> <label>View:</label>' + val.view + '</p> <p> <label>Genres:</label>' + val.genres + '</p> </div> </div> <div class="tooltip_summary"> <span>Summary : </span>' + val.description + '</div> </div> </div> </div>';
+                                $('#mystickytooltip').append($tooltip_add);
+                                return false;
+                            }
+                        });
+                        $(this).addClass('hastool');
+                    }
+                    $(this).attr("title", "");
+                }, function() {});
+            });
+        });
+    </script>
+
+
+    {% endblock %}
+</div>
+    </div><!-- end content area   -->
+
+
+
+
+<div class="flag_user_clear_cache" style="display: none;"></div>
+<div class="notification-popup">
+<span class="noti-helper"></span>
+<div class="noti-div">
+<p class="notification-content">content notification</p>
+<div class="notification-close a-h">CANCEL</div>
+</div>
+</div>
+</div>
+<div id="fb-root"></div>
+
+<div class="container container-footer">
+<div class="container-footer-content" style="background:#D37E47!important;">
+<div class="pn-hot-link">
+
+</div>
+<div class="pn-contacts">
+<h4><b>www.immortalsunscans.com</b></h4>
+<p>Current Time is Jul 01,2020 - 01:13:58 AM</p>
+    <p></p>
+</div>
+</div>
+</div>
+
+
+<script>
+    $appidfb = '190712595201460';
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "../connect.facebook.net/en_US/all.js#xfbml=1&appId=" + $appidfb;
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<script type="text/javascript" src="{% static 'themes/hm/js/changes-mode69ea.js' %}"></script>
+{% block script %}{% endblock %}
+</body>
+
+<!-- Mirrored from manganelo.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2020 17:16:55 GMT -->
+</html>

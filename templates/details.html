@@ -1,0 +1,158 @@
+﻿﻿{% extends 'base.html' %}
+{% load static %}
+{% block title %}Immortalsunscans Home{% endblock %}
+{% block stylesheet %}{% endblock %}
+{% block content %}
+
+<div style="width: 100%;overflow: hidden;text-align: center;float: left;">
+<div style="max-width: 728px;max-height: 90px;overflow: hidden;margin: 0px auto;">
+<iframe src="https://immortalsunscans.com/ads/adtrue_728x90_desktop.html" scrolling="no" frameborder="0" style="width: 728px;height: 90px;"></iframe>
+</div>
+</div>
+<script type="application/javascript">
+    $votepointstar = '5';
+    $defaultpointrating = '4.64';
+    $postid = '27319';
+    $ddrate = 'https://immortalsunscans.com/story_vote';
+    $ddbookmark = 'https://immortalsunscans.com/setbookmark';
+    $lg = false;
+</script>
+<script>
+    isfollowed = false;
+    jQuery(document).ready(function($) {
+        $(".story-bookmark").click(function() {
+            if($lg == false) {
+                show_notication_popup('You need to log in to use this function.');
+                return;
+            }
+        });
+    });
+</script>
+<div class="panel-breadcrumb">
+<a class="a-h" href="https://immortalsunscans.com/" title="Read immortalsunscans Online">Read immortalsunscans Online</a>
+<span>»</span>
+<a class="a-h" href="https://immortalsunscans.com/manga/apotheosis" title="Apotheosis">
+Apotheosis </a>
+</div>
+
+<div class="panel-story-info">
+<div class="story-info-left">
+<span class="info-image">
+<img class="img-loading" src="{{posts.image.url}}" alt="Apotheosis" title="Immortalsunscans" onerror="javascript:this.src='https://immortalsunscans.com/themes/hm/images/404_not_found.png';" />
+<em class="item-hot"></em> </span>
+<span class="style-btn btn-chapterlist">READ CHAPTER LIST</span>
+</div>
+<div class="story-info-right">
+<h1>{{posts.title}}</h1>
+<table class="variations-tableInfo">
+<tbody>
+<tr>
+<td class="table-label"><i class="info-alternative"></i>Alternative :</td>
+<td class="table-value"><h2>{{posts.alternative}}</h2></td>
+</tr>
+<tr>
+<td class="table-label"><i class="info-author"></i>Author(s) :</td>
+<td class="table-value">
+<a rel="nofollow" class='a-h' href='#'>{{posts.author}}</a> </td>
+</tr>
+<tr>
+<td class="table-label"><i class="info-status"></i>Status :</td>
+<td class="table-value">{{posts.status}}</td>
+</tr>
+<tr>
+<td class="table-label"><i class="info-genres"></i>Genres :</td>
+<td class="table-value">
+<a class='a-h' href='#'>Action</a> - <a class='a-h' href='#'>{{posts.status}}</a>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="story-info-right-extent">
+<p><span class="stre-label"><i class="info-time"></i>Updated :</span><span class="stre-value">{{posts.posted_on}}</span></p>
+<p><span class="stre-label"><i class="info-view"></i>View :</span><span class="stre-value">104,746,294</span></p>
+<p>
+<span class="stre-label"><i class="info-rate"></i>Rating :</span>
+<span class="stre-value">
+<em class="rate_row" id="rate_row">
+    <span class="rate_star checked" data-value="1">
+    </span>
+    <span class="rate_star checked" data-value="2">
+    </span>
+    <span class="rate_star checked" data-value="3">
+    </span>
+    <span class="rate_star checked" data-value="4">
+    </span>
+     <span class="rate_star checked" data-value="5">
+    </span>
+  <input type="hidden" class="get_rate" value="5" default-stars="5">
+</em>
+
+</span>
+</p>
+<p>
+<em id="rate_row_cmd">
+<em xmlns:v="http://rdf.data-vocabulary.org/#" typeof="v:Review-aggregate">
+<em property="v:itemreviewed">immortalsunscans.com</em>
+<em rel="v:rating">
+<em typeof="v:Rating">rate :
+<em property="v:average">4.64</em>/
+<em property="v:best">5</em>
+</em>
+</em> - <em property="v:votes">5074</em> votes
+</em>
+</em>
+</p>
+<p class="info-bookmark">
+<img class="story-bookmark" src="{% static 'img/bookmark.png' %}" />
+</p>
+<p class="noti-bookmark"></p>
+<p class="fb-save" data-uri="#" data-size="small" id="savefilmfb"></p>
+<div class="fb-like" data-href="#" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+</div>
+</div>
+<div class="panel-story-info-description" id="panel-story-info-description">
+<h3>Description :</h3>
+    <p>{{posts.description}}</p>
+</div>
+<div id="panel-description-linear">
+<i id="pn-description-linear-gradient" style="display: none;"></i>
+</div>
+<span style="display: none;" id="panel-story-info-description-show-more" class="a-h">SHOW MORE ⇩</span>
+<span style="display: initial;" id="panel-story-info-description-show-less" class="a-h">SHOW LESS ⇧</span>
+</div>
+<script>
+    link_chapter_null = 'https://immortalsunscanso.com/chapter/apotheosis/chapter_';
+</script>
+<div class="panel-story-chapter-list">
+<p class="row-title-chapter">
+<span class="row-title-chapter-name">Chapter name</span>
+<span class="row-title-chapter-view">View</span>
+<span class="row-title-chapter-time">Uploaded</span>
+</p>
+
+<ul class="row-content-chapter">
+    {% for chapter in posts.chapter_set.all %}
+<li class="a-h">
+
+    <a rel="nofollow" class="chapter-name text-nowrap" href="{% url 'chapter' chapter.article.id chapter.chapter_number %}" title="immortalsunscans" title="immortalsunscans">{{chapter.name}}</a>
+
+<span class="chapter-view text-nowrap">31,860</span>
+<span class="chapter-time text-nowrap" title="Jun 28,2020 07:06">{{posts.posted_on}}</span>
+</li>
+        {% endfor %}
+</ul>
+
+</div>
+<div class="panel-story-comment panel-fb-comment a-h">
+<p class="fb-comment-title fb-comment-title-show"><span>Facebook Comments</span><i></i></p>
+<div class="fb-comments-content" id="">
+
+</div>
+    <div class="fb-comments" data-href="http://127.0.0.1:8000/details/{{posts.id}}" data-numposts="5" data-width=""></div>
+</div>
+<script type="text/javascript" src="{% static 'themes/hm/js/custom-story.js' %}"></script> </div>
+
+
+
+{% endblock %}
+{% block script %}{% endblock %}
